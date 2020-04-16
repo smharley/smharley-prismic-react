@@ -6,6 +6,7 @@ import {
   Redirect
 } from 'react-router-dom'
 import { Home } from './pages'
+import './App.css'
 
 const App = () => {
   return (

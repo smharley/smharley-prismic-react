@@ -15,7 +15,8 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "standard": "^14.3.3",
-    "styled-components": "^5.1.0"
+    "styled-components": "^5.1.0",
+    "stylelint": "^13.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
