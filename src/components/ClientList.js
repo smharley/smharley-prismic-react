@@ -5,9 +5,9 @@ import { Client } from './'
 const ClientList = ({ clients }) => {
   return (
     <div>
-      <h2>
+      <Heading>
         Client List
-      </h2>
+      </Heading>
       <StyledClientList>
         {clients.map((client, i) => (
           <Client clientData={client} key={i} />
@@ -17,9 +17,13 @@ const ClientList = ({ clients }) => {
   )
 }
 
+const Heading = styled.h2`
+  margin-top: 80px;
+`
+
 const StyledClientList = styled.ul`
   display: grid;
-  gap: 20px;
+  gap: 40px;
   list-style: none;
   padding: 0;
 `

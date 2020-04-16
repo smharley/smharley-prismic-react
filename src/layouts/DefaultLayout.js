@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet'
 
 const DefaultLayout = ({ layoutClass, seoTitle, children }) => {
   return (
-    <Layout>
+    <Layout className={layoutClass}>
       <Helmet>
         <title>{seoTitle}</title>
         <link

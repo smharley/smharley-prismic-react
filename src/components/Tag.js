@@ -4,37 +4,37 @@ import styled from 'styled-components'
 const Tag = ({ tag, tagId }) => {
   if (tagId === 'front_end') {
     return (
-      <FeTagItem data-tagId={tagId}>
+      <FeTagItem>
         {tag}
       </FeTagItem>
     )
   } else if (tagId === 'product_design_sprint') {
     return (
-      <PdsTagItem data-tagId={tagId}>
+      <PdsTagItem>
         {tag}
       </PdsTagItem>
     )
   } else if (tagId === 'product_design') {
     return (
-      <PdTagItem data-tagId={tagId}>
+      <PdTagItem>
         {tag}
       </PdTagItem>
     )
   } else if (tagId === 'react') {
     return (
-      <ReactTagItem data-tagId={tagId}>
+      <ReactTagItem>
         {tag}
       </ReactTagItem>
     )
   } else if (tagId === 'research') {
     return (
-      <ResearchTagItem data-tagId={tagId}>
+      <ResearchTagItem>
         {tag}
       </ResearchTagItem>
     )
   } else if (tagId === 'ui') {
     return (
-      <UiTagItem data-tagId={tagId}>
+      <UiTagItem>
         {tag}
       </UiTagItem>
     )
