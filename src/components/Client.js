@@ -1,5 +1,5 @@
 import React from 'react'
-import { ClientTags } from './'
+import { TagList } from './'
 
 const Client = ({ clientData }) => {
   const client = clientData.data
@@ -15,7 +15,7 @@ const Client = ({ clientData }) => {
       <p>
         {client.client_description[0].text}
       </p>
-      <ClientTags tags={clientData.tags} />
+      <TagList tags={clientData.tags} />
     </li>
   )
 }

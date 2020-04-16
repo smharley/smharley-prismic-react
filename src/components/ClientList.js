@@ -18,7 +18,10 @@ const ClientList = ({ clients }) => {
 }
 
 const StyledClientList = styled.ul`
+  display: grid;
+  gap: 20px;
   list-style: none;
+  padding: 0;
 `
 
 export default ClientList
