@@ -1,11 +1,16 @@
 import React from 'react'
+import styled from 'styled-components'
 
 const Tag = ({ tag }) => {
   return (
-    <li className='client-tag-item'>
+    <TagItem>
       {tag}
-    </li>
+    </TagItem>
   )
 }
+
+const TagItem = styled.li`
+  font-weight: 900;
+`
 
 export default Tag

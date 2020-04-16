@@ -1,14 +1,15 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Tag } from './'
 
-const ClientTags = ({ clientTags }) => {
-  if (clientTags) {
+const ClientTags = ({ tags }) => {
+  if (tags) {
     return (
-      <ul className='client-tag-list'>
-        {clientTags.map((tag, i) => (
+      <StyledTagList>
+        {tags.map((tag, i) => (
           <Tag tag={tag} key={i} />
         ))}
-      </ul>
+      </StyledTagList>
     )
   } else {
     return (
@@ -16,5 +17,9 @@ const ClientTags = ({ clientTags }) => {
     )
   }
 }
+
+const StyledTagList = styled.ul`
+  list-style: none;
+`
 
 export default ClientTags

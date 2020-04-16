@@ -3,10 +3,9 @@ import { ClientTags } from './'
 
 const Client = ({ clientData }) => {
   const client = clientData.data
-  const clientTags = clientData.tags
 
   return (
-    <li className='client-list-item'>
+    <li>
       <h3>
         {client.client_name[0].text}
       </h3>
@@ -16,7 +15,7 @@ const Client = ({ clientData }) => {
       <p>
         {client.client_description[0].text}
       </p>
-      <ClientTags clientTags={clientTags} />
+      <ClientTags tags={clientData.tags} />
     </li>
   )
 }

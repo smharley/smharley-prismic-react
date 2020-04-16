@@ -1,19 +1,24 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Client } from './'
 
 const ClientList = ({ clients }) => {
   return (
-    <div className='client-list-container'>
-      <h2 className='client-list-heading'>
+    <div>
+      <h2>
         Client List
       </h2>
-      <ul className='client-list'>
+      <StyledClientList>
         {clients.map((client, i) => (
           <Client clientData={client} key={i} />
         ))}
-      </ul>
+      </StyledClientList>
     </div>
   )
 }
+
+const StyledClientList = styled.ul`
+  list-style: none;
+`
 
 export default ClientList
