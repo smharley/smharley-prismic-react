@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { RichText } from 'prismic-reactjs'
 import Prismic from 'prismic-javascript'
-import { client } from './prismic-configuration'
+import { prismicClient } from '../configuration/prismic-configuration'
 import './App.css'
 
 function App () {
@@ -10,7 +10,7 @@ function App () {
   /* eslint-disable no-unused-vars */
   useEffect(() => {
     const fetchPrismicData = async () => {
-      const response = await client.query(
+      const response = await prismicClient.query(
         [Prismic.Predicates.at('document.type', 'blog_post'),
           Prismic.Predicates.at('document.tags', ['featured'])],
         { pageSize: 25, page: 1, orderings: '[my.blog_post.date desc]' }

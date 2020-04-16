@@ -3,7 +3,7 @@ import { Predicates } from 'prismic-javascript'
 
 import { DefaultLayout } from '../layouts'
 import { Hero, ClientList } from '../components'
-import { prismicClient } from '../prismic-configuration'
+import { prismicClient } from '../configuration/prismic-configuration'
 
 const Home = () => {
   const [prismicData, setPrismicData] = useState({ homeDoc: null, clients: null })
