@@ -7,6 +7,10 @@ const DefaultLayout = ({ layoutClass, seoTitle, children }) => {
     <Layout>
       <Helmet>
         <title>{seoTitle}</title>
+        <link
+          rel='stylesheet'
+          href='https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap'
+        />
       </Helmet>
       {children}
     </Layout>
