@@ -15,7 +15,8 @@ const Home = () => {
         const homeDoc = await client.getSingle('home')
         const clients = await client.query(
           Predicates.at('document.type', 'client'),
-            { orderings: '[my.post.date desc]' }
+          { orderings: '[my.client.client_date desc]',
+            pageSize : 100 }
         );
 
         if (homeDoc) {

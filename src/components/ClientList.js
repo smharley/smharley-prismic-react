@@ -1,13 +1,18 @@
 import React from 'react'
-import { Client } from '../components'
+import { Client } from './'
 
 const ClientList = ({ clients }) => {
   return (
-    <ul className="client-list">
-      {clients.map((client) => (
-        <Client clientData={client} key={client.id} />
-      ))}
-    </ul>
+    <div className="client-list-container">
+      <h2 className="client-list-heading">
+        Client List
+      </h2>
+      <ul className="client-list">
+        {clients.map((client) => (
+          <Client clientData={client} key={client.id} />
+        ))}
+      </ul>
+    </div>
   )
 }
 

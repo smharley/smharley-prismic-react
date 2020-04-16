@@ -1,3 +1,5 @@
 export { default as Client } from './Client'
 export { default as ClientList } from './ClientList'
+export { default as ClientTags } from './ClientTags'
 export { default as Hero } from './Hero'
+export { default as Tag } from './Tag'
