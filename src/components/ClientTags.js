@@ -5,8 +5,8 @@ const ClientTags = ({ clientTags }) => {
   if (clientTags) {
     return (
       <ul className="client-tag-list">
-        {clientTags.map((tag) => (
-          <Tag tag={tag} key={tag.id} />
+        {clientTags.map((tag, i) => (
+          <Tag tag={tag} key={i} />
         ))}
       </ul>
     )

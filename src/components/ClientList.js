@@ -8,8 +8,8 @@ const ClientList = ({ clients }) => {
         Client List
       </h2>
       <ul className="client-list">
-        {clients.map((client) => (
-          <Client clientData={client} key={client.id} />
+        {clients.map((client, i) => (
+          <Client clientData={client} key={i} />
         ))}
       </ul>
     </div>

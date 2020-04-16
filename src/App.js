@@ -6,7 +6,6 @@ import {
   Redirect
 } from 'react-router-dom'
 import { Home } from './pages'
-import { apiEndpoint } from './prismic-configuration'
 
 const App = () => {
   return (

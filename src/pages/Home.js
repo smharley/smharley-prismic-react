@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { RichText } from 'prismic-reactjs'
 import { Predicates } from 'prismic-javascript'
 
 import { DefaultLayout } from '../layouts'
 import { Hero, ClientList } from '../components'
-import { client, linkResolver } from '../prismic-configuration'
+import { prismicClient } from '../prismic-configuration'
 
 const Home = () => {
   const [prismicData, setPrismicData] = useState({ homeDoc: null, clients: null })
@@ -12,15 +11,15 @@ const Home = () => {
   useEffect(() => {
     const fetchPrismicData = async () => {
       try {
-        const homeDoc = await client.getSingle('home')
-        const clients = await client.query(
+        const homeDoc = await prismicClient.getSingle('home')
+        const clients = await prismicClient.query(
           Predicates.at('document.type', 'client'),
           { orderings: '[my.client.client_date desc]',
             pageSize : 100 }
         );
 
         if (homeDoc) {
-          setPrismicData({ homeDoc: homeDoc, clients: clients.results })
+          setPrismicData({ homeDoc, clients: clients.results })
         } else {
           console.warn('Blog Home document was not found. Make sure it exists in your Prismic repository')
           // toggleNotFound(true)
