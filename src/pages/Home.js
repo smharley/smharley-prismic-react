@@ -14,9 +14,11 @@ const Home = () => {
         const homeDoc = await prismicClient.getSingle('home')
         const clients = await prismicClient.query(
           Predicates.at('document.type', 'client'),
-          { orderings: '[my.client.client_date desc]',
-            pageSize : 100 }
-        );
+          {
+            orderings: '[my.client.client_date desc]',
+            pageSize: 100
+          }
+        )
 
         if (homeDoc) {
           setPrismicData({ homeDoc, clients: clients.results })

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import {
   BrowserRouter,
   Route,
@@ -9,14 +9,14 @@ import { Home } from './pages'
 
 const App = () => {
   return (
-    <Fragment>
+    <>
       <BrowserRouter>
         <Switch>
           <Redirect exact from='/blog/' to='/' />
           <Route exact path='/' component={Home} />
         </Switch>
       </BrowserRouter>
-    </Fragment>
+    </>
   )
 }
 

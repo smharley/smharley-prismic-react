@@ -4,7 +4,7 @@ import { Tag } from './'
 const ClientTags = ({ clientTags }) => {
   if (clientTags) {
     return (
-      <ul className="client-tag-list">
+      <ul className='client-tag-list'>
         {clientTags.map((tag, i) => (
           <Tag tag={tag} key={i} />
         ))}

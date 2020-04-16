@@ -1,19 +1,19 @@
 import React, { useEffect } from 'react'
-import { Date, Link, RichText } from 'prismic-reactjs'
+import { RichText } from 'prismic-reactjs'
 import Prismic from 'prismic-javascript'
-import { client, linkResolver } from './prismic-configuration'
-import logo from './logo.svg'
+import { client } from './prismic-configuration'
 import './App.css'
 
-function App() {
+function App () {
   const [doc, setDocData] = React.useState(null)
 
+  /* eslint-disable no-unused-vars */
   useEffect(() => {
     const fetchPrismicData = async () => {
       const response = await client.query(
-        [ Prismic.Predicates.at('document.type', 'blog_post'),
-          Prismic.Predicates.at('document.tags', ['featured']) ],
-          { pageSize: 25, page: 1, orderings: '[my.blog_post.date desc]' }
+        [Prismic.Predicates.at('document.type', 'blog_post'),
+          Prismic.Predicates.at('document.tags', ['featured'])],
+        { pageSize: 25, page: 1, orderings: '[my.blog_post.date desc]' }
       ).then(response => {
         if (response) {
           setDocData(response.results[0])
@@ -22,9 +22,10 @@ function App() {
     }
     fetchPrismicData()
   }, [])
+  /* eslint-enable no-unused-vars */
 
   return (
-    <React.Fragment>
+    <>
       {
         doc ? (
           <div>
@@ -32,7 +33,7 @@ function App() {
           </div>
         ) : <div>No content</div>
       }
-    </React.Fragment>
+    </>
   )
 }
 

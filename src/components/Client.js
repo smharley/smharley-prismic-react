@@ -6,7 +6,7 @@ const Client = ({ clientData }) => {
   const clientTags = clientData.tags
 
   return (
-    <li className="client-list-item">
+    <li className='client-list-item'>
       <h3>
         {client.client_name[0].text}
       </h3>
