@@ -59,6 +59,8 @@ const Home = () => {
             </Features>
           </div>
         )
+      } else {
+        return (null)
       }
     })
 
